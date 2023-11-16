@@ -14,7 +14,8 @@ const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 
 myAnsverButton.addEventListener('click', (e) => {
   e.preventDefault();
-  /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
+  /* din kode her. Skriv en alert der skriver "du har svarret rigtigt" hvis svarret er true
+  og "du har svarret forkert" hvis svaret er false
   let myAnswer = myAnsverInput.value;
   console.log('Answer is: ' + myAnswer);
 });
