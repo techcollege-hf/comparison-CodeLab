@@ -12,10 +12,11 @@ const myAnsverInput = document.getElementById('answerOne');
 const myAnsverButton = document.getElementById('answerButton');
 const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 
-myAnsverButton.addEventListener('click', () => {
-
-    /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
-
+myAnsverButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
+  let myAnswer = myAnsverInput.value;
+  console.log('Answer is: ' + myAnswer);
 });
 
 /*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
@@ -41,8 +42,8 @@ ja i disney film
 
 /* helper functions*/
 function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
 
 /* eks på kald:
