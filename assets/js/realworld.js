@@ -15,7 +15,7 @@ const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 myAnsverButton.addEventListener('click', (e) => {
   e.preventDefault();
   /* din kode her. Skriv en alert der skriver "du har svarret rigtigt" hvis svarret er true
-  og "du har svarret forkert" hvis svaret er false
+  og "du har svarret forkert" hvis svaret er false*/
   let myAnswer = myAnsverInput.value;
   console.log('Answer is: ' + myAnswer);
 });
